@@ -1011,6 +1011,7 @@ maskComposite: "intersect",
 
       {/* RIGHT SIDE */}
 <div
+  className="contact-info-right"
   style={{
     borderLeft: "1px solid rgba(255,255,255,.12)",
     paddingLeft: "60px",
