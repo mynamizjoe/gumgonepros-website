@@ -298,7 +298,7 @@ maskComposite: "intersect",
   }}
 >
   <Image
-    src="/images/hero-property4.png"
+    src="/images/Hero-property4.png"
     alt="Commercial Property"
     width={1100}
     height={700}
