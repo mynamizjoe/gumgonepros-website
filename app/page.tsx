@@ -372,7 +372,7 @@ maskComposite: "intersect",
   />
   <h3>Targeted Cleaning</h3>
   <p>
-    Remove gum where it exists without costly spraying of entire walkways
+    Remove gum where it exists without costly spraying of entire walkways.
   </p>
 </div>
 
@@ -385,7 +385,7 @@ maskComposite: "intersect",
   />
   <h3>Surface Conscious</h3>
   <p>
-    Designed to remove buildup without eroding concrete or damaging surfaces
+    Designed to remove gum without eroding concrete or damaging surfaces.
   </p>
 </div>
 
@@ -398,11 +398,10 @@ maskComposite: "intersect",
   />
   <h3>Low Disruption</h3>
   <p>
-    No large pressure washing setup. Minimal impact to tenants, visitors, and
-    daily operations
+    Minimal property impact during cleaning.
+    No water. No hoses. No Mess.
   </p>
 </div>
-
 <div className="feature-card">
   <CalendarDays
     size={52}
@@ -410,9 +409,10 @@ maskComposite: "intersect",
     color="var(--accent)"
     style={{ marginBottom: "18px" }}
   />
-  <h3>Flexible Scheduling</h3>
+  <h3>Eco-Friendly Process</h3>
   <p>
-    Service appointments built around your property's schedule
+    Biodegradable Solution.  Good for your
+    property and the environment.
   </p>
 </div>
           </div>
@@ -1003,7 +1003,7 @@ maskComposite: "intersect",
               marginTop: "5px",
             }}
           >
-            🔒 We respect your privacy. Your information will never be shared.
+            🔒 Your information is secure and will never be shared.
           </p>
         </form>
 
@@ -1157,11 +1157,13 @@ maskComposite: "intersect",
             marginBottom: "12px",
           }}
         >
-          FULLY INSURED
+          RESULTS DRIVEN
         </h3>
 
         <p style={{ lineHeight: "1.8" }}>
-          Your Property, Our Promise
+          If gum's not gone... <br />
+          we come back. <br />
+          No questions asked.
         </p>
       </div>
     </div>
