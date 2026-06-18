@@ -268,9 +268,7 @@ useEffect(() => {
         marginBottom: "55px",
       }}
     >
-      Helping retail centers, office properties,
-      and multifamily communities maintain cleaner
-      sidewalks and stronger first impressions
+      Helping business and commercial properties maintain cleaner sidewalks and stronger first impressions
     </p>
 
     <a href="#contact">
@@ -852,8 +850,8 @@ maskComposite: "intersect",
     margin: "0 auto 50px",
   }}
 >
-      Tell us a little about your property and we'll
-      provide a free evaluation.
+      When people see you value your property, they notice &mdash; and when they notice,<br />
+      they value it too.
     </p>
 
     <div
@@ -1049,7 +1047,7 @@ maskComposite: "intersect",
           marginBottom: "12px",
         }}
       >
-        CALL OR TEXT
+        CONTACT US
       </h3>
 
       <p
@@ -1068,7 +1066,7 @@ maskComposite: "intersect",
           color: "rgba(255,255,255,.7)",
         }}
       >
-        Mon – Fri 7AM – 6PM
+        info@gumgonepros.com
       </p>
     </div>
   </div>
