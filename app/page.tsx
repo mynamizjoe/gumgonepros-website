@@ -12,6 +12,8 @@ import {
  Phone,
  MapPin,
  Landmark,
+ Menu,
+ X,
 } from "lucide-react";
 
 export default function Home() {
@@ -85,6 +87,8 @@ useEffect(() => {
 
   return () => clearInterval(scroll);
 }, []);
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const [form, setForm] = useState({
     name: "", email: "", phone: "", company: "", address: "", details: "", honeypot: "",
@@ -172,7 +176,7 @@ useEffect(() => {
   height={70}
   priority
   style={{
-    marginLeft: "-20px",
+    marginLeft: "-30px",
   }}
 />
 
@@ -199,8 +203,32 @@ useEffect(() => {
     </button>
   </a>
 </nav>
+
+        <button
+          className="hamburger-btn"
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-label="Toggle menu"
+          style={{ background: "none", border: "none", color: "white", cursor: "pointer", padding: "8px" }}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
         </div>
       </header>
+
+      {menuOpen && (
+        <>
+          <div
+            style={{ position: "fixed", inset: 0, zIndex: 9999 }}
+            onClick={() => setMenuOpen(false)}
+          />
+          <div className="mobile-nav">
+            <a href="#about" onClick={() => setMenuOpen(false)}>ABOUT</a>
+            <a href="#results" onClick={() => setMenuOpen(false)}>RESULTS</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>CONTACT</a>
+          </div>
+        </>
+      )}
 
       {/* HERO */}
 <section
@@ -838,21 +866,6 @@ maskComposite: "intersect",
         borderRadius: "999px",
       }}
     />
-
-    <p
-  style={{
-    textAlign: "center",
-    color: "rgba(255,255,255,.85)",
-    marginBottom: "50px",
-    lineHeight: "1.8",
-    fontSize: "20px",
-    maxWidth: "800px",
-    margin: "0 auto 50px",
-  }}
->
-      When people see you value your property, they notice &mdash; and when they notice,<br />
-      they value it too.
-    </p>
 
     <div
       className="mobile-stack"

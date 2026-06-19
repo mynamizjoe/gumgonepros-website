@@ -270,11 +270,17 @@ color: rgba(255,255,255,.60);
 .mobile-stack {
 display: flex !important;
 flex-direction: column !important;
+width: 100% !important;
+align-items: stretch !important;
+}
+
+#contact .mobile-stack > div:first-child {
+  width: 100% !important;
+}
 
 header > div {
   padding-left: 15px !important;
   padding-right: 15px !important;
-}
 }
 
 .hero-text {
@@ -416,10 +422,51 @@ body {
   gap: 40px;
 }
 
+.hamburger-btn {
+  display: none !important;
+}
+
 @media (max-width: 900px) {
 
   .nav-links {
     display: none !important;
   }
 
+  .hamburger-btn {
+    display: block !important;
+  }
+
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: rgba(20,21,24,.97);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  flex-direction: column;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  padding: 18px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  color: white;
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-nav {
+    display: flex;
+  }
 }
