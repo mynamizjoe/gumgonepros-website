@@ -257,13 +257,14 @@ useEffect(() => {
         lineHeight: ".95",
         fontFamily: "'Arial Narrow', Arial, sans-serif",
         letterSpacing: "-1px",
-        marginBottom: "18px",
+        marginBottom: "30px",
       }}
     >
       GUM REMOVAL
     </h1>
 
     <div
+      className="hero-accent-line"
       style={{
         width: "70px",
         height: "4px",
@@ -296,7 +297,7 @@ useEffect(() => {
         marginBottom: "55px",
       }}
     >
-      Helping business and commercial properties maintain cleaner sidewalks and stronger first impressions
+      Helping businesses and commercial properties maintain cleaner sidewalks and stronger first impressions
     </p>
 
     <a href="#contact">

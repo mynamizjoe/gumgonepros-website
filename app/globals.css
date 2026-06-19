@@ -208,7 +208,7 @@ color: rgba(255,255,255,.60);
 
 .hero-text {
   margin-left: 0;
-  padding-left: clamp(16px, 2vw, 40px);
+  padding-left: 0;
 }
 
 /* Only pull text left on screens wide enough that it won't clip */
@@ -228,6 +228,10 @@ color: rgba(255,255,255,.60);
   h1 {
     font-size: 66px !important;
   }
+}
+
+.hero-accent-line {
+  display: none;
 }
 
 /* MOBILE */
@@ -281,6 +285,12 @@ align-items: stretch !important;
 header > div {
   padding-left: 15px !important;
   padding-right: 15px !important;
+}
+
+.hero-accent-line {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .hero-text {
