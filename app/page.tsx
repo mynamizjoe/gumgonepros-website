@@ -6,7 +6,7 @@ import {
  Crosshair,
  ShieldCheck,
  Clock3,
- CalendarDays,
+ Leaf,
  Building2,
  Grid2X2,
  Phone,
@@ -430,7 +430,7 @@ maskComposite: "intersect",
   </p>
 </div>
 <div className="feature-card">
-  <CalendarDays
+  <Leaf
     size={52}
     strokeWidth={1.75}
     color="var(--accent)"
