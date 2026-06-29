@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "GumGone Pros | Professional Gum Removal Services",
-  description: "Targeted gum removal for retail centers, office properties, and multifamily communities in Richmond, VA and surrounding areas. Request a free evaluation.",
+  description: "Commercial gum removal for hotels, retail centers, entertainment venues, and commercial properties in Richmond, VA. Low-moisture, no-runoff, surface-safe. Free evaluation.",
 };
 
 const jsonLd = {
