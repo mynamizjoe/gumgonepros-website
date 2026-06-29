@@ -22,6 +22,36 @@ export const metadata: Metadata = {
   description: "Targeted gum removal for retail centers, office properties, and multifamily communities in Richmond, VA and surrounding areas. Request a free evaluation.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "GumGone Pros",
+  "description": "Commercial chewing gum removal for businesses and commercial properties. Low-moisture, low-pressure process using heated biodegradable solution — not pressure washing. No wastewater runoff. Safe for concrete, brick, asphalt, pavers, and natural stone.",
+  "telephone": "+1-804-600-3641",
+  "email": "info@gumgonepros.com",
+  "url": "https://www.gumgonepros.com",
+  "slogan": "Cleaner Sidewalks. Better Impressions.",
+  "logo": "https://www.gumgonepros.com/images/logo.png",
+  "image": "https://www.gumgonepros.com/images/logo.png",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Elevation Property Services LLC"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "VA",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Richmond",      "addressRegion": "VA", "addressCountry": "US" },
+    { "@type": "City", "name": "Chesterfield",  "addressRegion": "VA", "addressCountry": "US" },
+    { "@type": "City", "name": "Henrico",       "addressRegion": "VA", "addressCountry": "US" },
+    { "@type": "City", "name": "Midlothian",    "addressRegion": "VA", "addressCountry": "US" },
+    { "@type": "City", "name": "Mechanicsville","addressRegion": "VA", "addressCountry": "US" },
+    { "@type": "City", "name": "Short Pump",    "addressRegion": "VA", "addressCountry": "US" }
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,6 +62,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={manrope.className}>{children}</body>
     </html>
   );
