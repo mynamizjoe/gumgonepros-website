@@ -26,7 +26,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "GumGone Pros",
-  "description": "Commercial chewing gum removal for businesses and commercial properties. Low-moisture, low-pressure process using heated biodegradable solution — not pressure washing. No wastewater runoff. Safe for concrete, brick, asphalt, pavers, and natural stone.",
+  "description": "Commercial chewing gum removal for businesses and commercial properties. A heated biodegradable solution is applied through a brush nozzle that scrubs gum away as it dissolves — no spray, no pressure washing, no wastewater runoff. Safe for concrete, brick, asphalt, pavers, and other hard commercial surfaces.",
   "telephone": "+1-804-600-3641",
   "email": "info@gumgonepros.com",
   "url": "https://www.gumgonepros.com",
