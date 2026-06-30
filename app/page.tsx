@@ -14,7 +14,63 @@ import {
  Landmark,
  Menu,
  X,
+ ChevronDown,
 } from "lucide-react";
+
+const faqs = [
+  {
+    q: "Does gum removal damage concrete, brick, or pavers?",
+    a: "No. We apply a heated biodegradable solution through a brush nozzle that gently scrubs the gum away as it dissolves — there's no spray and no pressure washing. This lifts gum without eroding the surface, unlike high-heat pressure washing, which can wear down the top layer of concrete over time. Our process is safe for concrete, brick, asphalt, pavers, and other hard commercial surfaces.",
+  },
+  {
+    q: "Is there wastewater runoff or drainage compliance to consider?",
+    a: "No. Our process uses minimal water and produces no wastewater runoff, so there are no drainage or discharge concerns. This makes it a cleaner, lower-liability option than pressure washing, which generates significant runoff that often must be contained or managed.",
+  },
+  {
+    q: "Will the service disrupt my tenants, customers, or operations?",
+    a: "No. We work cleanly with no hoses, no spray, and no mess — and no traffic cones or blocked walkways. Our equipment operates quietly, with minimal sound that won't disrupt your tenants or customers, and we can schedule around your operating hours, including early mornings or evenings.",
+  },
+  {
+    q: "How is this different from pressure washing?",
+    a: "Pressure washing can remove gum, but it requires high heat and aggressive spray that erodes the top layer of concrete and other surfaces over time, and it creates significant water, mess, and runoff. We use a heated solution applied through a brush nozzle that scrubs the gum away as it dissolves — protecting the surface, leaving no runoff, and avoiding disruption to your property.",
+  },
+  {
+    q: "Will gum removal get my surface 100% clean?",
+    a: "Fresh gum is removed completely. Gum that has been left for a long time can leave a faint \"shadow\" — this happens when oils from the gum penetrate the concrete over time, creating a stain beneath where the gum sat. The longer gum remains, the higher the chance of permanent shadowing, which is why we recommend routine removal (at least quarterly) to protect your surfaces before staining sets in. During your free evaluation, we'll assess your surfaces and set clear expectations.",
+  },
+  {
+    q: "How often should gum removal be done?",
+    a: "For most commercial properties, quarterly service keeps walkways consistently clean and helps prevent permanent shadow staining. High-traffic locations — entertainment venues, busy retail centers, and hospitality properties — may benefit from monthly maintenance due to faster gum accumulation.",
+  },
+  {
+    q: "Do you offer recurring maintenance plans?",
+    a: "Yes. We offer recurring maintenance plans (monthly or quarterly) priced lower than one-time service. After an initial deep clean, ongoing visits keep your property consistently clean and are faster and more cost-effective over time.",
+  },
+  {
+    q: "What surfaces and areas do you service?",
+    a: "We service exterior walkways, entrances, sidewalks, courtyards, and curbs, on concrete, brick, asphalt, pavers, and other hard commercial surfaces. We also handle interior hard floors and carpeted areas for indoor venues.",
+  },
+  {
+    q: "Do you service indoor surfaces and carpets?",
+    a: "Yes. We use a quiet, low-moisture process suited for indoor spaces, making us a good fit for entertainment venues, trampoline parks, and family-focused facilities where gum accumulates on floors and carpets.",
+  },
+  {
+    q: "Do you remove anything besides gum?",
+    a: "While chewing gum removal is our specialty, our process also removes other sticky residue, food stains, and similar surface marks. We're happy to assess any problem areas during your free evaluation.",
+  },
+  {
+    q: "Are you insured?",
+    a: "Yes. GumGone Pros carries general liability insurance, and a Certificate of Insurance is available on request for property managers and ownership groups.",
+  },
+  {
+    q: "What does commercial gum removal cost?",
+    a: "Pricing depends on the size of the area, gum density, and service frequency. We offer one-time deep cleans and discounted recurring maintenance plans. Every quote starts with a free on-site evaluation, so you get accurate pricing for your specific property.",
+  },
+  {
+    q: "How long does a typical job take?",
+    a: "Job time depends on the size of the area and how much gum is present. A typical storefront entrance or walkway section is often completed in 1 to 2 hours. Heavily trafficked areas with years of buildup take longer on the first visit, while ongoing maintenance visits are much faster. During your free evaluation, we'll give you an accurate time estimate.",
+  },
+];
 
 export default function Home() {
 
@@ -89,6 +145,7 @@ useEffect(() => {
 }, []);
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const [form, setForm] = useState({
     name: "", email: "", phone: "", company: "", address: "", details: "", honeypot: "",
@@ -192,6 +249,8 @@ useEffect(() => {
 
   <a href="#results">RESULTS</a>
 
+  <a href="#faq">FAQ</a>
+
   <a href="#contact">CONTACT</a>
 
   <a
@@ -225,6 +284,7 @@ useEffect(() => {
           <div className="mobile-nav">
             <a href="#about" onClick={() => setMenuOpen(false)}>ABOUT</a>
             <a href="#results" onClick={() => setMenuOpen(false)}>RESULTS</a>
+            <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>CONTACT</a>
           </div>
         </>
@@ -841,6 +901,52 @@ maskComposite: "intersect",
 
   </div>
 </section>
+{/* FAQ */}
+
+<div className="section-divider" />
+
+<section id="faq" style={{ paddingTop: "100px", paddingBottom: "90px" }}>
+  <div className="container">
+
+    <h2 className="section-title">Commonly Asked Questions</h2>
+
+    <div
+      style={{
+        width: "60px",
+        height: "3px",
+        background: "var(--accent)",
+        margin: "8px auto 60px",
+        borderRadius: "999px",
+      }}
+    />
+
+    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+      {faqs.map((faq, i) => (
+        <div
+          key={i}
+          className={`faq-item${openFaq === i ? " open" : ""}`}
+          onClick={() => setOpenFaq(openFaq === i ? null : i)}
+        >
+          <div className="faq-question">
+            <span>{faq.q}</span>
+            <ChevronDown
+              size={22}
+              strokeWidth={2}
+              className={`faq-chevron${openFaq === i ? " open" : ""}`}
+            />
+          </div>
+          <div className={`faq-answer${openFaq === i ? " open" : ""}`}>
+            <div>
+              <div className="faq-answer-content">{faq.a}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
 {/* CONTACT */}
 
 <div className="section-divider" />
