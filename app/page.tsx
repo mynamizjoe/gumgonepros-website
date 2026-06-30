@@ -147,6 +147,9 @@ useEffect(() => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  const SHOW_GALLERY = false;
+  const SHOW_TESTIMONIALS = false;
+
   const [form, setForm] = useState({
     name: "", email: "", phone: "", company: "", address: "", details: "", honeypot: "",
   });
@@ -719,9 +722,10 @@ maskComposite: "intersect",
 
 {/* RESULTS GALLERY — hidden until 6 real examples exist */}
 
-<div className="section-divider" style={{ display: "none" }} />
+{SHOW_GALLERY && (<>
+<div className="section-divider" />
 <section
-  style={{ display: "none",
+  style={{
     paddingTop: "100px",
     paddingBottom: "90px",
   }}
@@ -842,9 +846,10 @@ maskComposite: "intersect",
 
   </div>
 </section>
+</>)}
 
 {/* TESTIMONIALS — hidden until 6 real testimonials exist */}
-<section style={{ display: "none", paddingBottom: "90px" }}>
+{SHOW_TESTIMONIALS && (<section style={{ paddingBottom: "90px" }}>
   <div className="container">
 
     <h2 className="section-title">
@@ -900,7 +905,7 @@ maskComposite: "intersect",
     </div>
 
   </div>
-</section>
+</section>)}
 {/* FAQ */}
 
 <div className="section-divider" />
