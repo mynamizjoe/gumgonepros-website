@@ -234,6 +234,15 @@ color: rgba(255,255,255,.60);
   display: none;
 }
 
+.hero-h1 {
+  margin-bottom: 65px;
+}
+
+.hero-gum-removal {
+  font-size: 82px;
+  white-space: nowrap;
+}
+
 /* MOBILE */
 
 @media (max-width: 900px) {
@@ -291,6 +300,11 @@ header > div {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  margin-bottom: 50px !important;
+}
+
+.hero-h1 {
+  margin-bottom: 36px;
 }
 
 .hero-text {
@@ -353,6 +367,16 @@ font-size: 42px;
 h1 {
 font-size: 54px !important;
 white-space: normal !important;
+}
+
+.hero-gum-removal {
+  font-size: 54px;
+  white-space: normal;
+}
+
+.hero-eyebrow {
+  font-size: 12px !important;
+  letter-spacing: 1.5px !important;
 }
 
 h2 {

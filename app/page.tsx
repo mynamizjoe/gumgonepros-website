@@ -231,7 +231,7 @@ useEffect(() => {
 >
           <Image
   src="/images/logo.png"
-  alt="GumGone Pros"
+  alt="GumGone Pros - Commercial Gum Removal Richmond VA"
   width={250}
   height={70}
   priority
@@ -312,18 +312,36 @@ useEffect(() => {
     paddingTop: "60px",
   }}
 >
-    <h1
-      style={{
-        fontSize: "82px",
-        whiteSpace: "nowrap",
-        fontWeight: "900",
-        lineHeight: ".95",
-        fontFamily: "'Arial Narrow', Arial, sans-serif",
-        letterSpacing: "-1px",
-        marginBottom: "30px",
-      }}
-    >
-      GUM REMOVAL
+    <h1 className="hero-h1">
+      <span
+        className="hero-gum-removal"
+        style={{
+          display: "block",
+          fontWeight: "900",
+          lineHeight: ".95",
+          fontFamily: "'Arial Narrow', Arial, sans-serif",
+          letterSpacing: "-1px",
+          position: "relative",
+          left: "-5px",
+        }}
+      >
+        GUM REMOVAL
+      </span>
+      <span
+        className="hero-eyebrow"
+        style={{
+          display: "block",
+          fontSize: "15px",
+          fontWeight: "600",
+          letterSpacing: "3px",
+          textTransform: "uppercase",
+          color: "var(--accent)",
+          marginTop: "14px",
+          fontFamily: "inherit",
+        }}
+      >
+        Commercial Gum Removal in Richmond, VA
+      </span>
     </h1>
 
     <div
@@ -332,7 +350,6 @@ useEffect(() => {
         width: "70px",
         height: "4px",
         background: "var(--accent)",
-        marginBottom: "45px",
       }}
     />
 
@@ -360,7 +377,7 @@ useEffect(() => {
         marginBottom: "55px",
       }}
     >
-      Helping businesses and commercial properties maintain cleaner sidewalks and stronger first impressions
+      Helping businesses and commercial properties across the Greater Richmond Area maintain cleaner sidewalks and stronger first impressions
     </p>
 
     <a href="#contact">
@@ -389,7 +406,7 @@ maskComposite: "intersect",
 >
   <Image
     src="/images/Hero-property4.png"
-    alt="Commercial Property"
+    alt="Commercial property sidewalk gum removal in Richmond, VA"
     width={1100}
     height={700}
     priority
@@ -440,10 +457,22 @@ maskComposite: "intersect",
     width: "60px",
     height: "3px",
     background: "var(--accent)",
-    margin: "8px auto 80px",
+    margin: "8px auto 30px",
     borderRadius: "999px",
   }}
 />
+<p
+  style={{
+    textAlign: "center",
+    maxWidth: "600px",
+    margin: "0 auto 60px",
+    fontSize: "20px",
+    lineHeight: "1.8",
+    color: "rgba(255,255,255,.85)",
+  }}
+>
+  Specialized gum removal serving commercial and residential properties throughout the Greater Richmond Area.
+</p>
           <div
             className="mobile-stack"
             style={{
@@ -558,7 +587,7 @@ maskComposite: "intersect",
         >
           <Image
             src="/images/Concrete Image1.png"
-            alt="Concrete"
+            alt="Concrete sidewalk gum removal Richmond VA"
             width={600}
             height={400}
             style={{
@@ -614,7 +643,7 @@ maskComposite: "intersect",
         >
           <Image
             src="/images/Brick Image1.png"
-            alt="Brick"
+            alt="Brick surface gum removal Richmond VA"
             width={600}
             height={400}
             style={{
@@ -670,7 +699,7 @@ maskComposite: "intersect",
         >
           <Image
             src="/images/Stone Image1.png"
-            alt="Stone"
+            alt="Stone surface gum removal Richmond VA"
             width={600}
             height={400}
             style={{
